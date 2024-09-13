@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="styles/ticket.css">
+</head>
+<body>
+    <center>
+        <h1>Ticket Booking</h1>
+    </center>
+    <form id="payment">
+        <fieldset>
+            <h2><span style="font-weight: lighter;">Card number</span></h2>
+            <div id="payment">
+                <input type="number" id="cardNumber" name="cardNumber" size="16" placeholder="Incomplete field" required>
+            </div>
+
+            <h2><span style="font-weight: lighter;">Expiry Date</span></h2>
+            <div id="payment">
+                <input type="month" id="expiryDate" name="expiryDate" size="11" maxlength="10" placeholder="Card too old" required>
+            </div>
+
+            <h2><span style="font-weight: lighter;">CVC/CVV</span></h2>
+            <div id="payment-right">
+                <input type="number" id="cvcCvv" name="cvcCvv" size="16" placeholder="Incomplete field" required>
+            </div>
+
+            <h2><span style="font-weight: lighter;">Name on card</span></h2>
+            <div id="payment">
+                <input type="text" id="nameOnCard" name="nameOnCard" size="16" placeholder="Name contains invalid characters" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <table id="summary-table">
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td><div id="sum_name"></div></td>
+                    </tr>
+                    <tr>
+                    
+                    <td>Date: </td>
+                    <td><div id="sum_date"></div></td>
+                    
+                    </tr>
+                    
+                    <tr>
+                    <td>Duration:</td>
+                    <td><div id="sum_duration"></div></td>                      
+                    </tr>
+                    
+                    <tr>
+                        <td>Peak Hours:</td>
+                        <td><div id="sum_peek"></div></td>
+                    </tr>
+
+                    <tr>
+                        <td>Normal Hours:</td>
+                        <td><div id="sum_normal"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><div id="sum_phone"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><div id="sum_email"></div></td>
+                    </tr>
+                    <tr>                        
+                    <td>Foreigner Adult:</td>                        
+                    <td><div id="sum_fa"></div></td>
+                    </tr>
+                    
+                    <tr>                        
+                    <td>Foreigner Child:</td>
+                    <td><div id="sum_fc"></div></td>                        
+                    </tr>
+                    
+                    <tr>
+                    <td>SL Adult:</td>
+                    <td><div id="sum_sa"></div> </td>                        
+                    </tr>
+                    
+                    <tr>                        
+                    <td>SL Child:</td>                        
+                    <td><div id="sum_sc"></div></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>Infant:</td>
+                    <td><div id="sum_inf"></div></td>
+                    </tr>
+                    
+                    <tr> 
+                    <td>Total Payable:</td>
+                    <td><div id="sum_total"></div></td>
+                    </tr>
+                    
+                    </tbody>
+              <!-- Summary table content will be updated dynamically by JavaScript -->
+            </table> 
+        </fieldset>
+        <a href="confirm.html"><button type="button" id="Confirm" >Pay</button></a>
+    </form>
+    <script src="script/payment.js"></script>
+</body>
+</html>

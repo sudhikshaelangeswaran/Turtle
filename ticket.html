@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Page</title>
+    <link rel="stylesheet" href="styles/ticket.css">
+</head>
+<body>
+    <h1>Ticket Booking</h1>
+    <form id="ticketBooking">
+        <fieldset>
+            <h2>Reservation Date</h2>
+            <p>
+                <label for="date">Arrival Date: </label>
+                <input type="date" id="date" name="arrivalDate" value="date" required>
+            </p>
+            
+
+            <div class="guests">
+                <center> <h2>Guests</h2></center>
+                 <div>
+                   <label for="sl-adult">SL Adult:</label>
+                   <button type="button" id="sl-adult-minus">-</button>
+                   <input type="number" id="sl-adult" min="0" max="10" value="0" readonly>
+                   <button type="button" id="sl-adult-plus">+</button>
+                 </div>
+                 <div>
+                   <label for="sl-child">SL Child:</label>
+                   <button type="button" id="sl-child-minus">-</button>
+                   <input type="number" id="sl-child" min="0" max="10" value="0" readonly>
+                   <button type="button" id="sl-child-plus">+</button>
+                 </div>
+                 <div>
+                   <label for="foreigner-adult">Foreigner Adult:</label>
+                   <button type="button" id="foreigner-adult-minus">-</button>
+                   <input type="number" id="foreigner-adult" min="0" max="10" value="0" readonly>
+                   <button type="button" id="foreigner-adult-plus">+</button>
+                 </div>
+                 <div>
+                   <label for="foreigner-child">Foreigner Child:</label>
+                   <button type="button" id="foreigner-child-minus">-</button>
+                   <input type="number" id="foreigner-child" min="0" max="10" value="0" readonly> 
+                   <button type="button" id="foreigner-child-plus">+</button>
+                 </div>
+                 <div>
+                   <label for="infant">Infant:</label>
+                   <button type="button" id="infant-minus">-</button>
+                   <input type="number" id="infant" min="0" max="10" value="0" readonly>
+                   <button type="button" id="infant-plus">+</button>
+                 </div>
+            </div>
+            <div class="duration">
+                <h2>Duration</h2> 
+              <select id="duration-dropdown" required>
+                  <!-- Options for time slots -->
+                  <!-- Populate these options dynamically using JavaScript -->
+                <option value="" disabled selected>Select a time slot</option>"
+                <option value="7:00 am - 8:00 am">7:00 am - 8:00 am</option>
+				<option value="8:00 am - 9:00 am">8:00 am - 9:00 am</option>
+                <option value="9:00 am 10:00 am">9:00 am 10:00 am (Peak) </option> 
+                <option value="10:00 am 11:00 am">10:00 am 11:00 am (Peak) </option>
+                <option value="11:00 am 12:00 pm">11:00 am 12:00 pm (Peak) </option> 
+                <option value="12:00 pm 1:00 pm">12:00 pm 1:00 pm (Peak) </option>
+                <option value="1:00 pm 2:00 pm">1:00 pm 2:00 pm </option> 
+                <option value="2:00 pm 3:00 pm">2:00 pm 3:00 pm </option>
+                <option value="3:00 pm 4:00 pm">3:00 pm 4:00 pm (Peak)</option>
+                <option value="4:00 pm 5:00 pm">4:00 pm 5:00 pm (Peak)</option> 
+                <option value="5:00 pm - 6:00 pm">5:00 pm 6:00 pm (Peak)</option>        
+              </select>
+            </div>
+            <a href="details.html"><button type="button" id="btnBook" disabled>Book now</button></a>
+
+            </fieldset>
+            <div class="pricing-table">
+                <h2>Pricing Table</h2>
+                <table>
+                  <tr>
+                    <th>Category</th>
+                    <th>Charge per normal hour</th>
+                    <th>Charge at peak hour</th>
+                  </tr>
+                  <tr>
+                    <td>Foreigner Adult</td>
+                    <td>10 USD</td>
+                    <td>13 USD</td>
+                  </tr>
+                  <tr>
+                    <td>Foreigner Child</td>
+                    <td>5 USD</td>
+                    <td>8 USd</td>
+                  </tr>
+                  <tr>
+                    <td>SL Adult</td>
+                    <td>4 USD</td>
+                    <td>6 USD</td>
+                  </tr>
+                  <tr>
+                    <td>SL Child</td>
+                    <td>2 USD</td>
+                    <td>3 USD</td>
+                  </tr>
+                  <tr>
+                    <td>Infant (SL or Foreigner) (under 4 years)</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                  </tr>
+                </table>
+              </div>
+        </form>
+        <form>
+            <fieldset>
+                <table id="summary-table">
+                    <tbody>
+
+                        <tr>
+                        
+                        <td>Date: </td>
+                        <td><div id="sum_date"></div></td>
+                        
+                        </tr>
+                        
+                        <tr>
+                        <td>Duration:</td>
+                        <td><div id="sum_duration">
+                            <div id="dur1"></div>
+                            <div id="dur2"></div>
+                            <div id="dur3"></div>
+                            <div id="dur4"></div>
+                            <div id="dur5"></div>
+                            <div id="dur6"></div>
+                            <div id="dur7"></div>
+                            <div id="dur8"></div>
+                            <div id="dur9"></div>
+                            <div id="dur10"></div>
+                            <div id="dur11"></div>
+                        </div></td>                      
+                        </tr>
+                        
+                        <tr>
+                            <td>Peak Hours:</td>
+                            <td><div id="sum_peek"></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>Normal Hours:</td>
+                            <td><div id="sum_normal"></div></td>
+                        </tr>
+                        
+                        <tr>                        
+                        <td>Foreigner Adult:</td>                        
+                        <td><div id="sum_fa"></div></td>
+                        </tr>
+                        
+                        <tr>                        
+                        <td>Foreigner Child:</td>
+                        <td><div id="sum_fc"></div></td>                        
+                        </tr>
+                        
+                        <tr>
+                        <td>SL Adult:</td>
+                        <td><div id="sum_sa"></div> </td>                        
+                        </tr>
+                        
+                        <tr>                        
+                        <td>SL Child:</td>                        
+                        <td><div id="sum_sc"></div></td>
+                        </tr>
+                        
+                        <tr>
+                        <td>Infant:</td>
+                        <td><div id="sum_inf"></div></td>
+                        </tr>
+                        
+                        <tr> 
+                        <td>Total Payable:</td>
+                        <td><div id="sum_total"></div></td>
+                        </tr>
+                        
+                        </tbody>
+                  <!-- Summary table content will be updated dynamically by JavaScript -->
+                </table> 
+            </fieldset>
+        </form>
+        <script src="script/ticket.js"></script>
+</body>
+</html> 

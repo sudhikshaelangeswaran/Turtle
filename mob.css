@@ -1,0 +1,60 @@
+@media (max-width: 700px) {
+    
+    header{
+        padding: 20px;
+        
+    }
+    header label {
+        margin-left: 50%;
+        display: initial;
+        position: relative;
+    }
+    header .Navi{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+
+        background:rgb(17, 53, 64);;
+        border-top: 1px solid black;
+        display: none;
+    }
+    Header .Navi ul li{
+        width: 100%;
+    }
+    header .Navi ul li ul{
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    header .Navi ul li ul li{
+        background: rgb(17, 53, 64);
+    }
+    
+
+    header #menu:checked ~ .Navi{
+        display: initial;
+    }
+    #flexing{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .box{
+        padding: 0;
+        margin: 0;
+    }
+    table img{
+        width: 100%;
+    }
+    img{
+        width: 100%;
+    }
+    iframe{
+        width: 100%;
+    }
+    table{
+        width: 100%;
+        font-size: 0.5em;
+        margin: 0;
+        padding: 0;
+    }
+}

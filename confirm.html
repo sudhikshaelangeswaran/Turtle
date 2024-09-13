@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/ticket.css">
+    <title>Confirm Page</title>
+</head>
+<body>
+    <center>
+        <h1>Ticket Booking</h1>
+    </center>
+    <h2>Confirmation</h2>
+    <br>
+    <p><i style="color: white;">Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance. 
+        Following is the summary of your order.</i></p>
+    <br>
+    <form>
+        <fieldset>
+            <table id="summary-table">
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td><div id="sum_name"></div></td>
+                    </tr>
+                    <tr>
+                    
+                    <td>Date: </td>
+                    <td><div id="sum_date"></div></td>
+                    
+                    </tr>
+                    
+                    <tr>
+                    <td>Duration:</td>
+                    <td><div id="sum_duration"></div></td>                      
+                    </tr>
+                    
+                    <tr>
+                        <td>Peak Hours:</td>
+                        <td><div id="sum_peek"></div></td>
+                    </tr>
+
+                    <tr>
+                        <td>Normal Hours:</td>
+                        <td><div id="sum_normal"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><div id="sum_phone"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><div id="sum_email"></div></td>
+                    </tr>
+                    <tr>                        
+                    <td>Foreigner Adult:</td>                        
+                    <td><div id="sum_fa"></div></td>
+                    </tr>
+                    
+                    <tr>                        
+                    <td>Foreigner Child:</td>
+                    <td><div id="sum_fc"></div></td>                        
+                    </tr>
+                    
+                    <tr>
+                    <td>SL Adult:</td>
+                    <td><div id="sum_sa"></div> </td>                        
+                    </tr>
+                    
+                    <tr>                        
+                    <td>SL Child:</td>                        
+                    <td><div id="sum_sc"></div></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>Infant:</td>
+                    <td><div id="sum_inf"></div></td>
+                    </tr>
+                    
+                    <tr> 
+                    <td>Total Payable:</td>
+                    <td><div id="sum_total"></div></td>
+                    </tr>
+                    
+                    </tbody>
+              <!-- Summary table content will be updated dynamically by JavaScript -->
+            </table>
+        </fieldset>
+    </form> 
+    <br>
+    <script src="script/confirm.js"></script>
+</body>
+</html>

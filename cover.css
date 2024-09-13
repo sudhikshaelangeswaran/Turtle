@@ -1,0 +1,42 @@
+.container {
+    position: relative;
+    text-align: center;
+    
+    background-size: cover;
+  }
+  
+  .text1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px #141414, 2px 2px #0e0701;
+    
+    color:#272a37;
+  }
+  .text2 {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 20px;
+  } 
+  a:link, a:visited {
+    background-color:#1f4977;
+    color: rgb(29, 27, 27);
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color:#67c1c8;
+  }
+  .link1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
